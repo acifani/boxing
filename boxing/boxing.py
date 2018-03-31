@@ -1,7 +1,8 @@
 import json
+import pkg_resources
 
-with open('boxes.json', encoding="utf8") as data:
-    boxes: dict = json.load(data)
+data = pkg_resources.resource_string(__name__, 'boxes.json')
+boxes = json.loads(data)
 
 NL = '\n'
 WS = ' '
