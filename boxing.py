@@ -1,4 +1,3 @@
-from collections import defaultdict
 import json
 
 with open('boxes.json', encoding="utf8") as data:
@@ -27,14 +26,14 @@ def boxing(text: str, style: str = 'single',
     left = horizontal_margin + chars['vertical'] + horizontal_padding
     right = horizontal_padding + chars['vertical']
 
-    blank_line = left + WS*max_line_len + right
+    blank_line = NL + left + WS*max_line_len + right
     vertical_padding = blank_line * padding_v
 
-    top = vertical_margin + top_bar + NL + vertical_padding
-    middle = NL
+    top = vertical_margin + top_bar + vertical_padding
+    middle = ''
     for line in lines:
         fill = WS * (max_line_len - len(line))
-        middle += left + line + fill + right + NL
+        middle += NL + left + line + fill + right
     bottom = vertical_padding + NL + bottom_bar + vertical_margin
 
-    return NL + top + middle + bottom
+    return top + middle + bottom
