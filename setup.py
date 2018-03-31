@@ -6,7 +6,7 @@ with io.open('README.rst', 'rt', encoding='utf8') as f:
 
 setup(
     name='boxing',
-    version='0.1.0',
+    version='0.1.1',
     url='https://github.com/acifani/boxing',
     license='BSD',
     author='Alessandro Cifani',
@@ -14,6 +14,7 @@ setup(
     description='Draw boxes like never before!',
     long_description=readme,
     py_modules=['boxing'],
+    include_package_data=True,
     classifiers=[
         'Development Status :: 3 - Alpha', 'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
