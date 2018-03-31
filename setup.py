@@ -6,7 +6,7 @@ with io.open('README.rst', 'rt', encoding='utf8') as f:
 
 setup(
     name='boxing',
-    version='0.1.1',
+    version='0.1.2',
     url='https://github.com/acifani/boxing',
     license='BSD',
     author='Alessandro Cifani',
@@ -14,6 +14,8 @@ setup(
     description='Draw boxes like never before!',
     long_description=readme,
     py_modules=['boxing'],
+    package_data={'': ['boxes.json']},
+    data_files=[('.',['boxes.json'])],
     include_package_data=True,
     classifiers=[
         'Development Status :: 3 - Alpha', 'Intended Audience :: Developers',
