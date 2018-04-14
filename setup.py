@@ -6,7 +6,7 @@ with io.open('README.rst', 'rt', encoding='utf8') as f:
 
 setup(
     name='boxing',
-    version='0.1.3',
+    version='0.1.4',
     url='https://github.com/acifani/boxing',
     license='BSD',
     author='Alessandro Cifani',
